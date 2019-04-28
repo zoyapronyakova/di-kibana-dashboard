@@ -4,24 +4,24 @@
         {
             "id": "3ad7c000-6514-11e9-90fe-9bbbb2896054",
             "type": "visualization",
-            "updated_at": "2019-04-25T07:19:07.942Z",
+            "updated_at": "2019-04-28T15:03:52.638Z",
             "version": 3,
             "attributes": {
                 "title": "build by type",
-                "visState": "{\"title\":\"build by type\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMetricsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"num of builds\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"build.type\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"build type\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"build.duration\",\"customLabel\":\"avg duration [seconds]\"}}]}",
+                "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"num of builds\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"build type\",\"field\":\"build.type\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":5},\"schema\":\"bucket\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"avg duration [seconds]\",\"field\":\"build.duration\"},\"schema\":\"metric\",\"type\":\"avg\"}],\"params\":{\"perPage\":10,\"showMetricsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"title\":\"build by type\",\"type\":\"table\"}",
                 "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
                 "description": "",
                 "version": 1,
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"91cbd100-2d09-11e9-b7ed-fb5f7f192d11\",\"query\":{\"query\":\"kubernetes.container_name:\\\"exec\\\"\",\"language\":\"kuery\"},\"filter\":[]}"
+                    "searchSourceJSON": "{\"index\":\"91cbd100-2d09-11e9-b7ed-fb5f7f192d11\",\"query\":{\"language\":\"kuery\",\"query\":\"kubernetes.container_name:\\\"exec\\\"\"},\"filter\":[]}"
                 }
             }
         },
         {
             "id": "91cbd100-2d09-11e9-b7ed-fb5f7f192d11",
             "type": "index-pattern",
-            "updated_at": "2019-04-25T06:58:41.388Z",
-            "version": 21,
+            "updated_at": "2019-04-28T14:05:59.651Z",
+            "version": 4,
             "attributes": {
                 "title": "logstash-*",
                 "timeFieldName": "@timestamp",
@@ -32,7 +32,7 @@
         {
             "id": "5099f890-6514-11e9-90fe-9bbbb2896054",
             "type": "dashboard",
-            "updated_at": "2019-04-25T08:04:46.176Z",
+            "updated_at": "2019-04-28T14:05:59.651Z",
             "version": 2,
             "attributes": {
                 "title": "Build Statistics Dashboard",
